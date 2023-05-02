@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Warframe Recruiting Message Generator</title>
+    <link id="style-link" rel="stylesheet" href="style-light.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Warframe Recruiting Message Generator</h1>
+        <form>
+            <label for="mission-type">Mission Type:</label>
+            <select id="mission-type" class="input-field">
+                <option value="duviri">Duviri</option>
+                <option value="fissure">Fissure</option>
+                <option value="eidolon">Eidolon</option>
+                <option value="profit taker">Profit Taker</option>
+            </select>
+            <label for="mission-level">Mission Level:</label>
+            <select id="mission-level" class="input-field">
+                <option value="normal">Normal</option>
+                <option value="steelpath">Steelpath</option>
+            </select>
+            <label for="additional-info">Additional Info:</label>
+            <input type="text" id="additional-info" class="input-field">
+            <label for="squad-size">Squad Size:</label>
+            <select id="squad-size" class="input-field">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <button type="button" id="generate-button" class="button primary">Generate Message</button>
+            <select id="mode-dropdown" class="button secondary">
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+            </select>
+        </form>
+        <div id="generated-message-container">
+            <p id="generated-message" class="output-field"></p>
+            <button type="button" id="copy-button" class="button secondary">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        var modeDropdown = document.getElementById("mode-dropdown");
+        var styleLink = document.getElementById("style-link");
+        modeDropdown.addEventListener("change", function() {
+            var selectedOption = modeDropdown.value;
+            styleLink.href = "style-" + selectedOption + ".css";
+        });
+    </script>
+</body>
+</html>
