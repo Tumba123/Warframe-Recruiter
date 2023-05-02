@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warframe Recruitment Messages</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Inter:400,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="hero-image"></div>
+    <div class="container">
+        <h1>Warframe Recruitment Messages</h1>
+        <div id="hosting-type">
+            <label for="mission-type">Play Type:</label>
+            <br>
+            <button class="btn btn-primary" value="H ">Hosting</button>
+            <button class="btn btn-primary" value="LF ">Looking For</button>
+        </div>
+        <br>
+        <div id="mission-type">
+            <label for="mission-type">Mission Type:</label>
+            <br>
+            <button class="btn btn-secondary" value="Duviri ">Duviri</button>
+            <button class="btn btn-secondary" value="Fissure ">Fissure</button>
+            <button class="btn btn-secondary" value="Survival ">Survival</button>
+            <button class="btn btn-secondary" value="Eidolon ">Eidolon</button>
+            <button class="btn btn-secondary" value="Profit Taker ">Profit Taker</button>
+        </div>
+        <br>
+        <div id="mission-level">
+            <label for="mission-type">Mission Level</label>
+            <br>
+            <button class="btn btn-outline-secondary" value="(N) ">Normal</button>
+            <button class="btn btn-outline-secondary" value="(SP) ">Steel Path</button>
+        </div>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="additional-message">Additional Message:</label>
+                <input type="text" id="additional-message" name="additional-message">
+            </div>
+            <div class="form-group">
+                <label for="players-needed">Squad Size:</label>
+                <input type="number" id="players-needed" name="players-needed" min="1" max="4" value="1">
+            </div>
+            <input type="button" class="submit" value="Submit" onclick="addMessage()">
+        </form>
+        <h2>Recruitment Messages</h2>
+        <div class="recruitment-messages-container">
+            <textarea id="recruitment-messages" rows="5" cols="50" readonly></textarea><br>
+            <button class="btn btn-success" onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="recruiting.js"></script>
+</body>
+</html>
