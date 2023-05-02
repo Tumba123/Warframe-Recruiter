@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Warframe Trading Web-App</title>
+  </head>
+  
+  <body>
+    <h1>Warframe Trading Web-App</h1>
+
+    <div class="buttons">
+      <button id="wtb-btn">WTB</button>
+      <button id="wts-btn">WTS</button>
+    </div>
+
+    <div class="dropdowns">
+      <label for="gun-type">Gun Type:</label>
+      <select id="gun-type">
+        <option value="">---Please select---</option>
+        <optgroup label="Primary">
+          <option value="Acceltra">Acceltra</option>
+          <option value="Amprex">Amprex</option>
+          <option value="Arca plasmor">Arca plasmor</option>
+          <!-- Add more primary guns here -->
+        </optgroup>
+        <optgroup label="Secondary">
+          <option value="Akstiletto">Akstiletto</option>
+          <option value="Atomos">Atomos</option>
+          <option value="Euphona Prime">Euphona Prime</option>
+          <!-- Add more secondary guns here -->
+        </optgroup>
+        <optgroup label="Melee">
+          <option value="Atterax">Atterax</option>
+          <option value="Galatine Prime">Galatine Prime</option>
+          <option value="Gram Prime">Gram Prime</option>
+          <!-- Add more melee weapons here -->
+        </optgroup>
+      </select>
+    </div>
+    <div>
+      <label for="additional-info">Additional Info:</label>
+      <input type="text" id="additional-info">
+    </div>
+    <div>
+      <button id="generate-btn">Generate Message</button>
+    </div>
+
+    <div>
+      <label for="preview-area">Preview:</label>
+      <textarea id="preview-area" cols="50" rows="10"></textarea>
+    </div>
+
+    <div>
+      <button id="copy-btn">Copy to Clipboard</button>
+    </div>
+
+    <script src="Warframe Trader.js"></script>
+  </body>
+</html>
